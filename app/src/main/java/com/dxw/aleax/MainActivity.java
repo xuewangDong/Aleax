@@ -1,13 +1,30 @@
 package com.dxw.aleax;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ListActivity {
+    String[] mNameList = new String[]{"Dialog全解"};
+    Class[] mNameClasses = new Class[]{DialogActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mNameList));
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(position);
+            }
+        });
+    }
+
+    private void startActivity(int position) {
+        Intent intent = new Intent(this, mNameClasses[position]);
+        startActivity(intent);
     }
 }
