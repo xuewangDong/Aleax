@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Aleax.iml" filepath="$PROJECT_DIR$/Aleax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Secured/Secured.iml" filepath="$PROJECT_DIR$/Secured/Secured.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/securedpreferencestore/securedpreferencestore.iml" filepath="$PROJECT_DIR$/securedpreferencestore/securedpreferencestore.iml" />
     </modules>
   </component>
 </project>

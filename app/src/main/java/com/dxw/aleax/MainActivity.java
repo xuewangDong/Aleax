@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity {
-    String[] mNameList = new String[]{"Dialog全解"};
+    String[] mNameList = new String[]{"Dialog全解 以及关于Dialog封装用法"};
     Class[] mNameClasses = new Class[]{DialogActivity.class};
 
     @Override
@@ -21,6 +21,10 @@ public class MainActivity extends ListActivity {
                 startActivity(position);
             }
         });
+
+
+
+
     }
 
     private void startActivity(int position) {

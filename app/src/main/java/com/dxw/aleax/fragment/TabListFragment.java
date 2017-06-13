@@ -23,7 +23,7 @@ public class TabListFragment extends Fragment implements AdapterView.OnItemClick
 
     private ListView mContentLv;
 
-    public static TabListFragment newInstance(String content){
+    public TabListFragment newInstance(String content){
         Bundle arguments = new Bundle();
         arguments.putString(EXTRA_CONTENT, content);
         TabListFragment tabContentFragment = new TabListFragment();
@@ -52,7 +52,7 @@ public class TabListFragment extends Fragment implements AdapterView.OnItemClick
 
         @Override
         public int getCount() {
-            return 10;
+            return 1;
         }
 
         @Override

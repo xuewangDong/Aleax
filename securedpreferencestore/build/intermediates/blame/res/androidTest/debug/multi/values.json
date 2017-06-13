@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "H:\\ASPoject\\GitHubRepertory\\Aleax\\securedpreferencestore\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 59,
+                    "endOffset": 110
+                },
+                "from": {
+                    "file": "H:\\ASPoject\\GitHubRepertory\\Aleax\\securedpreferencestore\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 59,
+                        "endOffset": 110
+                    }
+                }
+            }
+        ]
+    }
+]

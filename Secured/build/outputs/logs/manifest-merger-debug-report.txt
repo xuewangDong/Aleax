@@ -1,0 +1,89 @@
+-- Merging decision tree log ---
+manifest
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:3:5-60
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+application
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dxw\.android\build-cache\d54eb4f58cb9e15bf105aa437398f38c37585407\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dxw\.android\build-cache\bd41928eeb9e265040b893fa70e4975495f0ea6a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dxw\.android\build-cache\f5bb4757845b6e5e823144db163bdbe5e6ab0684\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dxw\.android\build-cache\214f13204cda502d11f2e0f3e44c5c2318ce947c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dxw\.android\build-cache\fb176f3bcd8fe25320682c992778a92f9e3ce9e3\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\698d861fc6cc3f105e787eee774da9280e57d5f9\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\5ea2840753eabcad1e44afe06252d6f252c96deb\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dxw\.android\build-cache\f1225feb714a08fca82c3fab9a9d35bbfac24672\output\AndroidManifest.xml:29:5-20
+MERGED from [Aleax:securedpreferencestore:unspecified] H:\ASPoject\GitHubRepertory\Aleax\securedpreferencestore\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+	android:label
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:9:9-35
+	android:allowBackup
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:10:9-40
+activity#devliving.online.securedpreferencestoresample.MainActivity
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:11:9-18:20
+	android:name
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:11:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:12:13-17:29
+action#android.intent.action.MAIN
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:15:17-77
+	android:name
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:15:27-74
+category#android.intent.category.DEFAULT
+ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:16:17-75
+	android:name
+		ADDED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml:16:27-73
+uses-sdk
+INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dxw\.android\build-cache\d54eb4f58cb9e15bf105aa437398f38c37585407\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dxw\.android\build-cache\bd41928eeb9e265040b893fa70e4975495f0ea6a\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dxw\.android\build-cache\f5bb4757845b6e5e823144db163bdbe5e6ab0684\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dxw\.android\build-cache\214f13204cda502d11f2e0f3e44c5c2318ce947c\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dxw\.android\build-cache\fb176f3bcd8fe25320682c992778a92f9e3ce9e3\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\698d861fc6cc3f105e787eee774da9280e57d5f9\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\5ea2840753eabcad1e44afe06252d6f252c96deb\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dxw\.android\build-cache\f1225feb714a08fca82c3fab9a9d35bbfac24672\output\AndroidManifest.xml:21:5-23:58
+MERGED from [Aleax:securedpreferencestore:unspecified] H:\ASPoject\GitHubRepertory\Aleax\securedpreferencestore\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+		INJECTED from H:\ASPoject\GitHubRepertory\Aleax\Secured\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\dxw\.android\build-cache\d54eb4f58cb9e15bf105aa437398f38c37585407\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\dxw\.android\build-cache\bd41928eeb9e265040b893fa70e4975495f0ea6a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\dxw\.android\build-cache\f5bb4757845b6e5e823144db163bdbe5e6ab0684\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\dxw\.android\build-cache\214f13204cda502d11f2e0f3e44c5c2318ce947c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\dxw\.android\build-cache\fb176f3bcd8fe25320682c992778a92f9e3ce9e3\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\698d861fc6cc3f105e787eee774da9280e57d5f9\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\dxw\.android\build-cache\5ea2840753eabcad1e44afe06252d6f252c96deb\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\dxw\.android\build-cache\f1225feb714a08fca82c3fab9a9d35bbfac24672\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\dxw\.android\build-cache\20d131d7044ca58dd00c61beb8f281e4ed544cbb\output\AndroidManifest.xml:26:9-47
