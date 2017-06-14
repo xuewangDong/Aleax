@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DialogActivity"
+        <activity android:name=".Dialog.DialogActivity"
                   android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         />
     </application>

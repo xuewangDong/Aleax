@@ -34,7 +34,7 @@ public class TabListFragment extends Fragment implements AdapterView.OnItemClick
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_tab_list, null);
+        View contentView = inflater.inflate(R.layout.fragment_tab_listview, null);
         mContentLv = (ListView) contentView.findViewById(R.id.lv_content);
         mContentLv.setOnItemClickListener(this);
         ViewCompat.setNestedScrollingEnabled(mContentLv, true);

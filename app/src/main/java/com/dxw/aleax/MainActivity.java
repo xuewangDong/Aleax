@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import com.dxw.aleax.Dialog.DialogActivity;
+
 public class MainActivity extends ListActivity {
     String[] mNameList = new String[]{"Dialog全解 以及关于Dialog封装用法"};
     Class[] mNameClasses = new Class[]{DialogActivity.class};

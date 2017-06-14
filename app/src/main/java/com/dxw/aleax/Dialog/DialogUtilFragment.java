@@ -1,4 +1,4 @@
-package com.dxw.aleax.fragment;
+package com.dxw.aleax.Dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
