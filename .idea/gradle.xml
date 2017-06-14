@@ -8,9 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Secured" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/securedpreferencestore" />
+            <option value="$PROJECT_DIR$/bottom_library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

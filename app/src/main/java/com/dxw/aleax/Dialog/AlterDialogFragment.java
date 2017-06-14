@@ -47,7 +47,7 @@ public class AlterDialogFragment extends Fragment implements AdapterView.OnItemC
         mListDatas.add("自定义对话框            ");
         mListDatas.add("ProgressDialog   一般  ");
         mListDatas.add("ProgressDialog   进度条  ");
-        mListDatas.add("CustonDialogFragment   进度条  ");
+        mListDatas.add("DialogFragment   自定义  ");
         return mListDatas;
     }
 

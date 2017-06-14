@@ -19,10 +19,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.dxw.aleax.R;
+import com.dxw.aleax.adapter.ShowAdapter;
 import com.hss01248.lib.MyDialogListener;
 import com.hss01248.lib.MyItemDialogListener;
 import com.hss01248.lib.StytledDialog;
@@ -34,18 +36,7 @@ import java.util.List;
  * Created by dxw on 2017/6/13.
  */
 
-public class DialogUtilFragment extends Fragment implements View.OnClickListener {
-
-    Button btnCommonProgress;
-    Button btnContextProgress;
-    Button btnMaterialAlert;
-    Button btnIosAlert;
-    Button btnIosBottomSheet;
-    Button btnIosCenterList;
-    Button btnIosAlertVertical;
-    Button btnIosAlert2;
-    Button btnIosAlertVertical2;
-
+public class DialogUtilFragment extends Fragment implements  AdapterView.OnItemClickListener {
     Dialog gloablDialog;
 
     String msg = "如果你有心理咨询师般的敏锐，你会进一步发现——这个姑娘企图用考研来掩饰自己对于毕业的恐惧。";
@@ -76,113 +67,107 @@ public class DialogUtilFragment extends Fragment implements View.OnClickListener
         tabContentFragment.setArguments(arguments);
         return tabContentFragment;
     }
+
+    private ListView mListVview;
+    private ShowAdapter mShowAdapter;
+    private List<String> mListDatas;
+
+    private List<String> getDatas(){
+        List<String> mListDatas = new ArrayList<>();
+        mListDatas.add("Activity Progress 横向加载");
+        mListDatas.add("Context Progress");
+        mListDatas.add("Ios Alter");
+        mListDatas.add("Ios Alert Vertial");
+        mListDatas.add("Ios_Alert");
+        mListDatas.add("Ios_Alert_vertial");
+        mListDatas.add("Ios_Bottom_sheet");
+        mListDatas.add("Ios_Center_sheet");
+        return mListDatas;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         View view = inflater.inflate(R.layout.fragment_dialog_util, null);
-         btnCommonProgress = (Button) view.findViewById(R.id.btn_common_progress);
-         btnContextProgress = (Button) view.findViewById(R.id.btn_context_progress);
-         btnMaterialAlert = (Button) view.findViewById(R.id.btn_material_alert);
-         btnIosAlert = (Button) view.findViewById(R.id.btn_ios_alert);
-         btnIosBottomSheet = (Button) view.findViewById(R.id.btn_ios_bottom_sheet);
-         btnIosCenterList = (Button) view.findViewById(R.id.btn_ios_center_list);
-         btnIosAlertVertical = (Button) view.findViewById(R.id.btn_ios_alert_vertical);
-         btnIosAlert2 = (Button) view.findViewById(R.id.btn_ios_alert_2);
-         btnIosAlertVertical2 = (Button) view.findViewById(R.id.btn_ios_alert_vertical_2);
-         btnCommonProgress.setOnClickListener(this);
-         btnContextProgress.setOnClickListener(this);
-         btnMaterialAlert.setOnClickListener(this);
-         btnIosAlert.setOnClickListener(this);
-         btnIosBottomSheet.setOnClickListener(this);
-         btnIosCenterList.setOnClickListener(this);
-         btnIosAlertVertical.setOnClickListener(this);
-         btnIosAlert2.setOnClickListener(this);
-         btnIosAlertVertical2.setOnClickListener(this);
-
+        View view = inflater.inflate(R.layout.fragment_tab_listview,null);
+        mListVview = (ListView) view.findViewById(R.id.lv_content);
+        mShowAdapter = new ShowAdapter(getActivity());
+        mListDatas = getDatas();
+        mShowAdapter.setListDatas(mListDatas);
+        mListVview.setAdapter(mShowAdapter);
+        mListVview.setOnItemClickListener(this);
         return view;
     }
 
-    private void showToast(String onItemClick) {
-        Toast.makeText(getActivity(),onItemClick,Toast.LENGTH_SHORT).show();
-    }
-
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_common_progress:
-                StytledDialog.showProgressDialog(getContext(), msg, true, true);
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+       if (position == 0 ) {
+           StytledDialog.showProgressDialog(getContext(), msg, true, true);
+       } else if (position == 1) {
+           gloablDialog = StytledDialog.showProgressDialog(getActivity(), msg, true, true);
+       }else if (position == 2) {
+           StytledDialog.showMdAlert(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
+               @Override
+               public void onFirst(DialogInterface dialog) {
+                   showToast("onFirst");
+               }
 
-                break;
-            case R.id.btn_context_progress:
-                gloablDialog = StytledDialog.showProgressDialog(getActivity(), msg, true, true);
-                break;
-            case R.id.btn_material_alert:
-                StytledDialog.showMdAlert(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
-                    @Override
-                    public void onFirst(DialogInterface dialog) {
-                        showToast("onFirst");
-                    }
+               @Override
+               public void onSecond(DialogInterface dialog) {
+                   showToast("onSecond");
+               }
 
-                    @Override
-                    public void onSecond(DialogInterface dialog) {
-                        showToast("onSecond");
-                    }
-
-                    @Override
-                    public void onThird(DialogInterface dialog) {
-                        showToast("onThird");
-                    }
+               @Override
+               public void onThird(DialogInterface dialog) {
+                   showToast("onThird");
+               }
 
 
-                });
-                break;
-            case R.id.btn_ios_alert:
-                StytledDialog.showIosAlert(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
-                    @Override
-                    public void onFirst(DialogInterface dialog) {
-                        showToast("onFirst");
-                    }
+           });
+       }else if (position == 3) {
+           StytledDialog.showIosAlert(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
+               @Override
+               public void onFirst(DialogInterface dialog) {
+                   showToast("onFirst");
+               }
 
-                    @Override
-                    public void onSecond(DialogInterface dialog) {
-                        showToast("onSecond");
-                    }
+               @Override
+               public void onSecond(DialogInterface dialog) {
+                   showToast("onSecond");
+               }
 
-                    @Override
-                    public void onThird(DialogInterface dialog) {
-                        showToast("onThird");
-                    }
-
-
-                });
-                break;
-            case R.id.btn_ios_alert_vertical:
-                StytledDialog.showIosAlertVertical(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
-                    @Override
-                    public void onFirst(DialogInterface dialog) {
-                        showToast("onFirst");
-                    }
-
-                    @Override
-                    public void onSecond(DialogInterface dialog) {
-                        showToast("onSecond");
-                    }
-
-                    @Override
-                    public void onThird(DialogInterface dialog) {
-                        showToast("onThird");
-                    }
+               @Override
+               public void onThird(DialogInterface dialog) {
+                   showToast("onThird");
+               }
 
 
-                });
-                break;
-            case R.id.btn_ios_bottom_sheet: {
-                final List<String> strings = new ArrayList<>();
-                strings.add("1");
-                strings.add("2");
-                strings.add(msg);
-                strings.add("4");
-                strings.add("5");
+           });
+       }else if (position == 4) {
+           StytledDialog.showIosAlertVertical(getActivity(), "title", msg, "sure", "cancle", "think about", true, true, new MyDialogListener() {
+               @Override
+               public void onFirst(DialogInterface dialog) {
+                   showToast("onFirst");
+               }
+
+               @Override
+               public void onSecond(DialogInterface dialog) {
+                   showToast("onSecond");
+               }
+
+               @Override
+               public void onThird(DialogInterface dialog) {
+                   showToast("onThird");
+               }
+
+
+           });
+       }else if (position == 5) {
+           final List<String> strings = new ArrayList<>();
+           strings.add("1");
+           strings.add("2");
+           strings.add(msg);
+           strings.add("4");
+           strings.add("5");
                /* strings.add(msg);
                 strings.add("6");
                 strings.add("7");
@@ -198,99 +183,66 @@ public class DialogUtilFragment extends Fragment implements View.OnClickListener
                 strings.add("13");
                 strings.add(msg);*/
 
-                StytledDialog.showBottomItemDialog(getActivity(), strings, "cancle", true, true, new MyItemDialogListener() {
-                    @Override
-                    public void onItemClick(String text, int position) {
-                        showToast(text);
-                    }
+           StytledDialog.showBottomItemDialog(getActivity(), strings, "cancle", true, true, new MyItemDialogListener() {
+               @Override
+               public void onItemClick(String text, int position) {
+                   showToast(text);
+               }
 
-                    @Override
-                    public void onBottomBtnClick() {
-                        showToast("onItemClick");
-                    }
-                });
-            }
-            break;
-            case R.id.btn_ios_center_list:
+               @Override
+               public void onBottomBtnClick() {
+                   showToast("onItemClick");
+               }
+           });
 
-                final List<String> strings = new ArrayList<>();
-                strings.add("1");
-                strings.add("2");
-                strings.add(msg);
-                strings.add("4");
-                strings.add("5");
-                strings.add(msg);
-             /*   strings.add("6");
-                strings.add("7");
-                strings.add(msg);
-                strings.add("8");
-                strings.add("9");
-                strings.add(msg);
+       }else if (position == 6) {
+           StytledDialog.showIosAlert(getActivity(), "title", msg, "sure", "", "", true, true, new MyDialogListener() {
+               @Override
+               public void onFirst(DialogInterface dialog) {
+                   showToast("onFirst");
+               }
 
-                strings.add("10");
-                strings.add("11");
-                strings.add(msg);
-                strings.add("12");
-                strings.add("13");
-                strings.add(msg);*/
+               @Override
+               public void onSecond(DialogInterface dialog) {
+                   showToast("onSecond");
+               }
 
-                StytledDialog.showIosSingleChoose(getActivity(), strings, true, true, new MyItemDialogListener() {
-                    @Override
-                    public void onItemClick(String text, int position) {
-                        showToast(text);
-                    }
-
-                    @Override
-                    public void onBottomBtnClick() {
-                        showToast("onItemClick");
-                    }
-
-                });
-
-                break;
-            case R.id.btn_ios_alert_2:
-                StytledDialog.showIosAlert(getActivity(), "title", msg, "sure", "", "", true, true, new MyDialogListener() {
-                    @Override
-                    public void onFirst(DialogInterface dialog) {
-                        showToast("onFirst");
-                    }
-
-                    @Override
-                    public void onSecond(DialogInterface dialog) {
-                        showToast("onSecond");
-                    }
-
-                    @Override
-                    public void onThird(DialogInterface dialog) {
-                        // showToast("onThird");
-                    }
+               @Override
+               public void onThird(DialogInterface dialog) {
+                   // showToast("onThird");
+               }
 
 
-                });
-
-                break;
-            case R.id.btn_ios_alert_vertical_2:
-                StytledDialog.showIosAlertVertical(getActivity(), "title", msg, "sure", "", "", true, true, new MyDialogListener() {
-                    @Override
-                    public void onFirst(DialogInterface dialog) {
-                        showToast("onFirst");
-                    }
-
-                    @Override
-                    public void onSecond(DialogInterface dialog) {
-                        showToast("onSecond");
-                    }
-
-                    @Override
-                    public void onThird(DialogInterface dialog) {
-                        showToast("onThird");
-                    }
+           });
 
 
-                });
-                break;
-        }
+       }else if (position == 7) {
+           StytledDialog.showIosAlertVertical(getActivity(), "title", msg, "sure", "", "", true, true, new MyDialogListener() {
+               @Override
+               public void onFirst(DialogInterface dialog) {
+                   showToast("onFirst");
+               }
+
+               @Override
+               public void onSecond(DialogInterface dialog) {
+                   showToast("onSecond");
+               }
+
+               @Override
+               public void onThird(DialogInterface dialog) {
+                   showToast("onThird");
+               }
+
+
+           });
+       }
+
     }
+
+    private void showToast(String onItemClick) {
+        Toast.makeText(getActivity(),onItemClick,Toast.LENGTH_SHORT).show();
+    }
+
 
     private void showGlobleDialog(Context context) {
         WindowManager wmManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -417,4 +369,5 @@ public class DialogUtilFragment extends Fragment implements View.OnClickListener
         dialog.show();
         return dialog;
     }
+
 }

@@ -1,3 +1,97 @@
 <resources>
     <string name="app_name">Aleax</string>
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+    <string name="more_info">More Info</string>
+
+    <string name="basic">Basic</string>
+    <string name="stacked">Stacked Buttons</string>
+    <string name="neutral">Neutral Button</string>
+    <string name="callbacks">Callbacks</string>
+    <string name="list">Basic List</string>
+    <string name="singleChoice">Single Choice</string>
+    <string name="multiChoice">Multi Choice</string>
+    <string name="customView">Custom View</string>
+    <string name="themed">Themed</string>
+    <string name="signalStrength">Signal strength</string>
+    <string name="excellent">Excellent</string>
+    <string name="security">Security</string>
+    <string name="securityType">802.1x EAP</string>
+    <string name="password">Password</string>
+    <string name="showPassword">Show password</string>
+    <string name="useGoogleLocationServices">Use Google\'s Location Services?</string>
+    <string name="useGoogleLocationServicesPrompt"><![CDATA[Let Google help apps determine location. <b>This means sending anonymous location data to Google</b>, even when no apps are running.]]></string>
+    <string name="socialNetworks">Social Networks</string>
+    <string name="choose">Choose</string>
+    <string name="speedBoost">Turn on speed boost now!</string>
+    <string name="noThanks">No thanks</string>
+    <string name="googleWifi">Google Wifi</string>
+    <string name="connect">Connect</string>
+
+    <string name="about">About</string>
+    <string name="about_body"><![CDATA[
+        material-dialogs, a library  designed by <b>Aidan Follestad</b>.<br/>
+        <a href=\'http://aidanfollestad.com\'>Website</a>&nbsp;&nbsp;
+        <a href=\'https://twitter.com/afollestad\'>Twitter</a>&nbsp;&nbsp;
+        <a href=\'https://google.com/+AidanFollestad\'>Google+</a>&nbsp;&nbsp;
+        <a href=\'https://github.com/afollestad\'>GitHub</a>&nbsp;&nbsp;
+        <a href=\'https://www.linkedin.com/in/afollestad\'>LinkedIn</a>
+    ]]></string>
+    <string name="dismiss">Dismiss</string>
+    <string name="basic_notitle">Basic (No Title)</string>
+    <string name="shareLocationPrompt">This app wants to access your location.</string>
+    <string name="basic_list_long">Basic List (Long)</string>
+    <string name="states">States</string>
+    <string name="custom_listitem_button">A button!</string>
+    <string name="custom_adapter">Custom Adapter</string>
+    <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae metus nec sapien elementum interdum ac mollis tortor. Nunc porttitor metus placerat orci auctor, sed dictum magna dapibus. Morbi a lacus ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin posuere nisl imperdiet lectus elementum accumsan. Etiam lacinia nisi ut nulla fermentum tempus. Integer ornare lacinia diam non maximus. Vestibulum iaculis urna eu elementum scelerisque. Etiam nisl erat, bibendum vitae magna nec, convallis malesuada erat. Cras non porttitor nibh. Pellentesque rhoncus sem luctus felis tincidunt bibendum. Pellentesque vulputate eros at nulla sollicitudin volutpat. Pellentesque laoreet est sit amet erat laoreet, id molestie nulla efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed varius nisl at imperdiet facilisis.</string>
+    <string name="basic_longContent">Basic (Long Content)</string>
+    <string name="basic_icon">Basic (Icon)</string>
+    <string name="basic_list_notitle">Basic List (No Title)</string>
+    <string name="folder_chooser">Folder Chooser</string>
+    <string name="showCancelDismissCallbacks">Show/Cancel/Dismiss Callbacks</string>
+    <string name="changelog">Changelog</string>
+    <string name="customView_webView">Custom View (No Scroll, WebView)</string>
+    <string name="customView_datePicker">Custom View (No Scroll, DatePicker)</string>
+    <string name="color_chooser_primary">Color Chooser (Primary)</string>
+    <string name="color_chooser_accent">Color Chooser (Accent)</string>
+    <string name="ssid">SSID</string>
+    <string name="ssidLit">Material Dialogs</string>
+
+    <string-array name="socialNetworks">
+        <item>Twitter</item>
+        <item>Google+</item>
+        <item>Instagram</item>
+        <item>Facebook</item>
+    </string-array>
+
+    <string-array name="socialNetworks_longItems">
+        <item>Twitter is an online social networking service that enables users to send and read short 140-character messages called "tweets".</item>
+        <item>Google+ is an interest-based social network that is owned and operated by Google Inc. The service is Google\'s fourth foray into social networking.</item>
+        <item>Instagram is an online mobile photo-sharing, video-sharing and social networking service that enables its users to take pictures and videos, and share them on a variety of social networking platforms.</item>
+        <item>Facebook is an online social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with friends.</item>
+    </string-array>
+    <string name="action_settings">Settings</string>
+
+    <!-- 分享 -->
+    <string name="share">分享</string>
+    <string name="share_title">分享到</string>
+    <string name="moments">朋友圈</string>
+    <string name="wechat">微信好友</string>
+    <string name="weibo">新浪微博</string>
+    <string name="qq">QQ</string>
+    <string name="qzone">QQ空间</string>
+
+    <!-- button -->
+    <string name="horizontal_single">横向单行</string>
+    <string name="horizontal_multi">横向多行</string>
+    <string name="vertical">竖向</string>
+    <string name="grid">网格</string>
+
+    <!-- item -->
+    <string name="delete">删除</string>
+    <string name="add_item">添加</string>
+    <string name="source_on_github">Github位置</string>
+    <string name="title_item">功能</string>
+
 </resources>

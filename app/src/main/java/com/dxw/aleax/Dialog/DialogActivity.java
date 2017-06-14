@@ -13,19 +13,19 @@ import java.util.List;
  */
 
 public class DialogActivity extends BaseActivity {
-
     @Override
     protected List<String> getTabIndicator() {
         return Arrays.asList(new String[]{
-                "DialogUtil","基础"
+                "基础","仿Ios显示","底部弹出框"
         });
     }
 
     @Override
     protected List<Fragment> getTabFragments() {
         List<Fragment>  tabFragments = new ArrayList<>();
-        tabFragments.add(DialogUtilFragment.newInstance(getTabIndicator().get(0)));
-        tabFragments.add(AlterDialogFragment.newInstance(getTabIndicator().get(1)));
+        tabFragments.add(AlterDialogFragment.newInstance(getTabIndicator().get(0)));
+        tabFragments.add(DialogUtilFragment.newInstance(getTabIndicator().get(1)));
+        tabFragments.add(BottomDialogFagment.newInstance(getTabIndicator().get(2)));
         return tabFragments;
     }
 }
