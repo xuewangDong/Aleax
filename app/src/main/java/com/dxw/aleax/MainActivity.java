@@ -7,15 +7,34 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import com.dxw.aleax.Dialog.DialogActivity;
+import com.dxw.aleax.dialog.DialogActivity;
+import com.dxw.aleax.net.NetWorkActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ListActivity {
-    String[] mNameList = new String[]{"Dialog全解 以及关于Dialog封装用法"};
-    Class[] mNameClasses = new Class[]{DialogActivity.class};
+    List<String> mNameList = null;
+    List<Class> mNameClasses = null;
+    private List<String> getDatas() {
+        List<String> mList = new ArrayList<>();
+        mList.add("Dialog全解 以及关于Dialog封装用法");
+        mList.add("网络 全解 以及关于封装的网络方法");
+        return mList;
+    }
+
+    private List<Class> getClasses() {
+        List<Class> mList = new ArrayList<>();
+        mList.add(DialogActivity.class);
+        mList.add(NetWorkActivity.class);
+        return mList;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mNameList = getDatas();
+        mNameClasses = getClasses();
         setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mNameList));
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -23,14 +42,10 @@ public class MainActivity extends ListActivity {
                 startActivity(position);
             }
         });
-
-
-
-
     }
 
     private void startActivity(int position) {
-        Intent intent = new Intent(this, mNameClasses[position]);
+        Intent intent = new Intent(this, mNameClasses.get(position));
         startActivity(intent);
     }
 }

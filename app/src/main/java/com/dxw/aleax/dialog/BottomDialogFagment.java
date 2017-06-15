@@ -1,4 +1,4 @@
-package com.dxw.aleax.Dialog;
+package com.dxw.aleax.dialog;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

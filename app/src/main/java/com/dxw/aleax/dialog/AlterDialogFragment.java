@@ -1,4 +1,4 @@
-package com.dxw.aleax.Dialog;
+package com.dxw.aleax.dialog;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

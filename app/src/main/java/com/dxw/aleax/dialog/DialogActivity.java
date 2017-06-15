@@ -1,4 +1,4 @@
-package com.dxw.aleax.Dialog;
+package com.dxw.aleax.dialog;
 
 import android.support.v4.app.Fragment;
 
@@ -16,7 +16,7 @@ public class DialogActivity extends BaseActivity {
     @Override
     protected List<String> getTabIndicator() {
         return Arrays.asList(new String[]{
-                "基础","仿Ios显示","底部弹出框"
+                "基础","仿Ios显示","底部弹出框","MaterialDialog"
         });
     }
 
@@ -26,6 +26,7 @@ public class DialogActivity extends BaseActivity {
         tabFragments.add(AlterDialogFragment.newInstance(getTabIndicator().get(0)));
         tabFragments.add(DialogUtilFragment.newInstance(getTabIndicator().get(1)));
         tabFragments.add(BottomDialogFagment.newInstance(getTabIndicator().get(2)));
+        tabFragments.add(MaterialDialogFragment.newInstance(getTabIndicator().get(3)));
         return tabFragments;
     }
 }
