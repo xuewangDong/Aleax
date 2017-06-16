@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 
 import com.dxw.aleax.dialog.DialogActivity;
 import com.dxw.aleax.net.NetWorkActivity;
+import com.dxw.aleax.webview.WebViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class MainActivity extends ListActivity {
         List<String> mList = new ArrayList<>();
         mList.add("Dialog全解 以及关于Dialog封装用法");
         mList.add("网络 全解 以及关于封装的网络方法");
+        mList.add("webView 的使用全解");
         return mList;
     }
 
@@ -27,6 +29,7 @@ public class MainActivity extends ListActivity {
         List<Class> mList = new ArrayList<>();
         mList.add(DialogActivity.class);
         mList.add(NetWorkActivity.class);
+        mList.add(WebViewActivity.class);
         return mList;
     }
 
